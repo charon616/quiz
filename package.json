@@ -1,0 +1,32 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "My awe-inspiring Nuxt.js project",
+  "author": "charon616",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@nuxtjs/bulma": "^1.2.1",
+    "bulma-stylus": "^0.8.1-rc.2",
+    "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.0.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0"
+  }
+}
