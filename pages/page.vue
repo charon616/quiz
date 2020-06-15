@@ -52,7 +52,7 @@ export default {
     moveToNext: function(){
         this.name = this.answer;
         if(this.target == this.questions.length - 1){
-            this.$router.push('/end');
+            this.$router.push('/questionnaire');
         }else{
             this.target++;
             this.processing = true

@@ -3,12 +3,10 @@
     .tile.is-parent
         .tile.is-child 
             .content
-                .title.inst お疲れ
-                p  heyheyehye
+                .title.inst おわり
+                p  あざざした
 
         
-
-    nuxt-link.button.is-link.is-fullwidth.is-rounded.submit#submit(type="submit" to="/") Next →
 </template>
 
 <script>

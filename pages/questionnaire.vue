@@ -50,8 +50,24 @@
             | No 
 
     .buttons
-        .button.is-fullwidth.is-link.is-rounded.submit(type="submit") Next →
+        .button.is-fullwidth.is-link.is-rounded.submit(type="submit" @click="$router.push('/end')") Next →
 
+    form(name="contact" method="POST" netlify)
+        p
+            label Your Name: 
+                input(type="text" name="name")
+        p
+            label Your Email: 
+                input(type="email" name="email")
+        p
+            label Your Role: 
+                select(name="role[]" multiple)
+                    option(value="leader") Leade
+                    option(value="follower") Follower
+        p
+            label Message: 
+                textarea(name="message")
+        button(type="submit") Send
     //- .timer
     //-     p.timer__txt 00:00
     //-     progress.progress.is-small(value="15" max="100") 15%

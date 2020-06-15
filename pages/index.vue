@@ -29,15 +29,41 @@
           td item
           td item
           td item
+
+    .test
+      p hey
+      p {{ anyValues }}
+      p {{ message }}
+      p {{ cat }}
+      button.btn.btn-primary(@click="setItem(cat)") Submit
   
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
+
 export default {
   data () {
     return {
-      
+      cat: {
+        name: 'ねこ',
+        color: 'white',
+        age: 5
+      }
     }
+  },
+  computed: {
+    ...mapState([
+      'anyValues', 'message'
+    ]),
+    loaded() {
+      return this.$store.state.localStorage.status && this.$store.state.sessionStorage.status
+    }
+  },
+  methods: {
+    ...mapMutations([
+      'addValue', 'setItem'
+    ])
   }
 }
 </script>

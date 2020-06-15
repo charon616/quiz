@@ -4,11 +4,14 @@
         .tile.is-child 
             .content
                 .title.inst タイトル
+
                 p  heyheyehye
-
-        
-
-    nuxt-link.button.is-link.is-fullwidth.is-rounded.submit#submit(type="submit" to="/page") Next →
+                .field
+                    label.label INPUT Your id
+                    .control
+                        input.input.is-info.is-medium(type="text" placeholder="number" v-model="userid")
+            
+    button.button.is-link.is-fullwidth.is-rounded.submit#submit(type="submit" @click="$router.push('/page')" :disabled="processing") Next →
 </template>
 
 <script>
@@ -16,7 +19,15 @@
 export default {
   data () {
     return {
-
+        userid: "",
+        processing: true
+    }
+  },
+  watch: {
+    userid: function(val){
+        if(val != ""){
+            this.processing = false
+        }
     }
   }
 }
@@ -37,7 +48,6 @@ input:checked + label
     .pic
         border 2px solid hsl(204, 86%, 53%)
         box-shadow 0 0 12px 0 hsl(204, 86%, 53%)
-
 
 .timer
     margin 40px 0  0

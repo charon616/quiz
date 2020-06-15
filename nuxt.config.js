@@ -28,7 +28,12 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    {
+      src: "~plugins/persistedstate.js",
+      ssr: false
+    }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -40,7 +45,7 @@ export default {
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     "@nuxtjs/bulma",
     "@nuxtjs/style-resources",
-    "nuxt-fontawesome"
+    "nuxt-fontawesome",
   ],
   styleResources: {
     stylus: ["~/assets/main.styl", "~/assets/_variables.styl"]
@@ -48,8 +53,8 @@ export default {
   fontawesome: {
     imports: [
       {
-        set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
+        set: "@fortawesome/free-solid-svg-icons",
+        icons: ["fas"]
       }
     ]
   },
